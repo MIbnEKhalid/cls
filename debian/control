@@ -1,0 +1,12 @@
+Source: cls
+Section: utils
+Priority: optional
+Maintainer: Muhammad Bin Khalid <chmuhammadbinkhalid28@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+
+Package: cls
+Architecture: all
+Description: Simple command to clear screen
+ This package provides a 'cls' command that clears
+ the terminal screen, similar to the Windows 'cls' command.
