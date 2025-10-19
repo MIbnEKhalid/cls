@@ -1,10 +1,11 @@
 Package: cls
-Version: 1.0.0-1
+Version: 1.0.1-1
 Architecture: all
 Maintainer: Muhammad Bin Khalid <chmuhammadbinkhalid28@gmail.com>
-Installed-Size: 9
+Installed-Size: 18
 Section: utils
 Priority: optional
 Description: Simple command to clear screen
  This package provides a 'cls' command that clears
  the terminal screen, similar to the Windows 'cls' command.
+ Supports case-insensitive variants (cls, Cls, CLS, etc.).

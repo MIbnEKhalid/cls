@@ -1,3 +1,11 @@
+cls (1.0.1-1) unstable; urgency=medium
+
+  * Added case-insensitive command support
+  * Improved performance with native terminal clearing
+  * Added compatible mode option
+
+ -- Muhammad Bin Khalid <chmuhammadbinkhalid28@gmail.com>  Sun, 19 Oct 2025 12:00:00 +0000
+
 cls (1.0.0-1) unstable; urgency=medium
 
   * Initial release.

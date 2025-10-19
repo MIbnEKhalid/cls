@@ -10,3 +10,4 @@ Architecture: all
 Description: Simple command to clear screen
  This package provides a 'cls' command that clears
  the terminal screen, similar to the Windows 'cls' command.
+ Supports case-insensitive variants (cls, Cls, CLS, etc.).

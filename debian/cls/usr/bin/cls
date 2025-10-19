@@ -1,2 +1,68 @@
 #!/bin/bash
-clear
+
+VERSION="1.0.1"
+AUTHOR="Muhammad Bin Khalid"
+GITHUB="MIbnEKhalid"
+EMAIL="chmuhammadbinkhalid28@gmail.com"
+
+# Default settings
+USE_NATIVE=1  # Use native clear by default (faster)
+
+show_version() {
+    echo "cls version $VERSION"
+    echo "Created by $AUTHOR <$EMAIL>"
+    echo "Github: https://github.com/$GITHUB/cls"
+}
+
+show_help() {
+    show_version
+    echo "Usage: cls [OPTION]..."
+    echo "Clear the terminal screen."
+    echo
+    echo "Options:"
+    echo "  -h, --help                Display this help message"
+    echo "  -v, --version             Display version information"
+    echo "  -c, --compatible          Use compatible clear method"
+    echo
+    echo "Examples:"
+    echo "  cls                       Clear screen normally (fast)"
+    echo "  cls -c                    Clear screen in compatible mode"
+    echo
+    echo "Report bugs to: $EMAIL"
+    echo "Github: https://github.com/$GITHUB/cls"
+}
+
+clear_screen() {
+    if [ "$USE_NATIVE" -eq 1 ]; then
+        # Fast clear using ANSI escape sequences
+        printf "\033[H\033[2J\033[3J"
+    else
+        # Fallback to traditional clear command
+        clear
+    fi
+}
+
+# Parse command line arguments
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        "-h"|"--help")
+            show_help
+            exit 0
+            ;;
+        "-v"|"--version")
+            show_version
+            exit 0
+            ;;
+        "-c"|"--compatible")
+            USE_NATIVE=0
+            shift
+            ;;
+        *)
+            echo "cls: invalid option -- '$1'"
+            echo "Try 'cls --help' for more information."
+            exit 1
+            ;;
+    esac
+done
+
+clear_screen

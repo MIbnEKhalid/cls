@@ -1,0 +1,33 @@
+# Debian package files
+*.deb
+*.build
+*.buildinfo
+*.changes
+*.dsc
+*.tar.gz
+*.tar.xz
+*.upload
+
+# Debian build directories
+debian/.debhelper/
+debian/cls/
+debian/debhelper-build-stamp
+debian/files
+debian/*.debhelper
+debian/*.debhelper.log
+debian/*.substvars
+
+# Editor and system files
+.vscode/
+*~
+.*.swp
+.DS_Store
+
+# Build artifacts
+build/
+dist/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
