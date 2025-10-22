@@ -7,8 +7,7 @@ override_dh_install:
 	ln -sf cls debian/cls/usr/bin/Cls
 	ln -sf cls debian/cls/usr/bin/CLS
 	ln -sf cls debian/cls/usr/bin/CLs
-	ln -sf cls debian/cls/usr/bin/CIs
 	ln -sf cls debian/cls/usr/bin/ClS
-	ln -sf cls debian/cls/usr/bin/cLs
 	ln -sf cls debian/cls/usr/bin/cLS
+	ln -sf cls debian/cls/usr/bin/cLs
 	ln -sf cls debian/cls/usr/bin/clS
