@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0.1"
+VERSION="1.0.2"
 AUTHOR="Muhammad Bin Khalid"
 GITHUB="MIbnEKhalid"
 EMAIL="chmuhammadbinkhalid28@gmail.com"
