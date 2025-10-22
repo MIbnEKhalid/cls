@@ -44,7 +44,10 @@ clear_screen() {
 
 # Parse command line arguments
 while [ "$#" -gt 0 ]; do
-    case "$1" in
+    # Convert argument to lowercase for case-insensitive comparison
+    ARG_LOWER=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+    
+    case "$ARG_LOWER" in
         "-h"|"--help")
             show_help
             exit 0

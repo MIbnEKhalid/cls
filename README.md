@@ -1,24 +1,66 @@
-# cls
+# cls - The Time Saver
 
-A simple command-line utility to clear the terminal screen.
+**Are you lazy enough to not want to type clear?** Well, we got you covered! Tired of writing long, tedious commands? Meet `cls` – the shorter, snappier, and way more entertaining way to clear your terminal screen!
+
+> **TL;DR:** `cls` does the same thing as `clear`, but with way fewer keystrokes. You're welcome!
 
 ## Installation
 
-### Method 1: Using Package Repository
-```bash
-sudo add-apt-repository ppa:mibnekhalid/cls
-sudo apt update
-sudo apt install cls
-```
+### Method 1: Universal Installation (Recommended) 🚀
 
-### Method 2: Direct Download
-
-You can also download and install the package directly:
+Works on **all Linux distributions** (Debian, Red Hat, Alpine, Arch, etc.) and **Android (Termux)**:
 
 ```bash
-wget http://pkg.mbktechstudio.com/cls/cls_1.0.1-1_all.deb
-sudo dpkg -i cls_1.0.1-1_all.deb
+git clone https://github.com/MIbnEKhalid/cls.git
+cd cls
+sudo bash install.sh
 ```
+
+### Method 2: Direct Download (Debian-based systems only)
+
+For Ubuntu, Debian, and derivatives:
+
+```bash
+wget https://github.com/MIbnEKhalid/cls/releases/download/v1.0.2/cls_1.0.2-1_all.deb
+sudo dpkg -i cls_1.0.2-1_all.deb
+```
+
+### Method 3: Manual Installation (Works everywhere)
+
+Copy the script directly to your system:
+
+```bash
+git clone https://github.com/MIbnEKhalid/cls.git
+cd cls
+sudo install -m 755 cls /usr/local/bin/cls
+```
+
+For Termux (Android):
+```bash
+git clone https://github.com/MIbnEKhalid/cls.git
+cd cls
+install -m 755 cls "$PREFIX/bin/cls"
+```
+
+### Method 4: Building from source
+
+To build the Debian package from source:
+
+1. Install build dependencies:
+   ```bash
+   sudo apt install build-essential debhelper devscripts git
+   ```
+
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/MIbnEKhalid/cls.git
+   cd cls
+   ```
+
+3. Build the package:
+   ```bash
+   dpkg-buildpackage -us -uc && sudo dpkg -i ../cls_1.0.2-1_all.deb
+   ```
 
 ## Usage
 
@@ -43,36 +85,44 @@ cls -c, --compatible          # Clear screen in compatible mode
 
 ## Uninstallation
 
-You can uninstall cls using either of these methods:
+### If installed via package manager:
 
 ```bash
-# If installed via apt
+# Debian/Ubuntu
 sudo apt remove cls
 
-# If installed via dpkg
-sudo dpkg -r cls
+# Red Hat/Fedora/CentOS
+sudo dnf remove cls
+# or
+sudo yum remove cls
+
+# Alpine Linux
+sudo apk del cls
+
+# Arch Linux
+sudo pacman -R cls
 ```
 
-## Building from source
+### If installed via universal installer or manual method:
 
-To build this package from source:
+```bash
+# Most systems
+sudo rm /usr/local/bin/cls
 
-1. Install build dependencies:
-   ```bash
-   sudo apt install build-essential debhelper devscripts
-   ```
+# Termux (Android)
+rm $PREFIX/bin/cls
+```
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/MIbnEKhalid/cls.git
-   cd cls
-   ```
 
-3. Build the package:
-   ```bash
-   dpkg-buildpackage -us -uc && sudo dpkg -i ../cls_1.0.1-1_all.deb
-   ```
+## License
 
-## Author
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Muhammad Bin Khalid <chmuhammadbinkhalid28@gmail.com>
+
+## Contact
+
+For questions or contributions, please contact:
+- **Muhammad Bin Khalid**  
+  - Website: [mbktechstudio.com/Support](https://mbktechstudio.com/Support/)  
+  - Email: [support@mbktechstudio.com](mailto:support@mbktechstudio.com)  
+  - Alternate Email: [chmuhammadbinkhalid28@gmail.com](mailto:chmuhammadbinkhalid28@gmail.com)
