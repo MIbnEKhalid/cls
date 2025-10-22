@@ -2,7 +2,7 @@ Package: cls
 Version: 1.0.2-1
 Architecture: all
 Maintainer: Muhammad Bin Khalid <chmuhammadbinkhalid28@gmail.com>
-Installed-Size: 18
+Installed-Size: 17
 Section: utils
 Priority: optional
 Description: Simple command to clear screen
