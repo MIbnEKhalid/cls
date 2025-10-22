@@ -5,17 +5,9 @@ A simple command-line utility to clear the terminal screen.
 ## Installation
 
 ### Method 1: Using Package Repository
-
-Add our repository to your system:
-
 ```bash
-# Add the repository
-echo "deb http://pkg.mbktechstudio.com/cls /" | sudo tee /etc/apt/sources.list.d/cls.list
-
-# Update package list
+sudo add-apt-repository ppa:mibnekhalid/cls
 sudo apt update
-
-# Install cls
 sudo apt install cls
 ```
 
